@@ -28,6 +28,8 @@ function Register() {
       });
 
       alert("Registration successful");
+
+      // Go to login after success
       nav("/login");
 
     } catch (err) {
@@ -75,7 +77,19 @@ function Register() {
 
       </form>
 
+      {/* Error message */}
       <p className="error">{msg}</p>
+
+      {/* Login Link */}
+      <p style={{ textAlign: "center" }}>
+        Already have an account?{" "}
+        <span
+          style={{ color: "#3498db", cursor: "pointer" }}
+          onClick={() => nav("/login")}
+        >
+          Login here
+        </span>
+      </p>
 
     </div>
   );

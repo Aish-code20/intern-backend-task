@@ -66,13 +66,24 @@ function Login() {
         <br /><br />
 
         <div className="center">
-  <button type="submit">Login</button>
-</div>
-
+          <button type="submit">Login</button>
+        </div>
 
       </form>
 
-      <p>{msg}</p>
+      {/* Error / Message */}
+      <p className="error">{msg}</p>
+
+      {/* Register Link */}
+      <p style={{ textAlign: "center" }}>
+        Don't have an account?{" "}
+        <span
+          style={{ color: "#3498db", cursor: "pointer" }}
+          onClick={() => nav("/register")}
+        >
+          Register here
+        </span>
+      </p>
 
     </div>
   );
